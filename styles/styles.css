@@ -6,15 +6,15 @@
 :root {
   /* colors */
   --background-color: #ffffff;
-  --light-color: #f5f5f5;
-  --dark-color: #2d2d2d;
-  --text-color: #4a4a4a;
+  --light-color: #f8f9fa;
+  --dark-color: #4a0d4a;
+  --text-color: #4a0d4a;
   --link-color: #e10a0a;
-  --link-hover-color: #b30000;
+  --link-hover-color: #b30808;
 
   /* fonts */
-  --body-font-family: Arial, Helvetica, sans-serif;
-  --heading-font-family: Virgin Atlantic Sans, Arial, sans-serif;
+  --body-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
+  --heading-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -24,24 +24,18 @@
   /* heading sizes */
   --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 36px;
-  --heading-font-size-l: 28px;
-  --heading-font-size-m: 22px;
-  --heading-font-size-s: 18px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
   --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 100px;
+  --nav-height: 76px;
 }
 
 /* fallback fonts */
 @font-face {
-  font-family: Arial-fallback;
-  size-adjust: 100%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: Virgin Atlantic Sans-fallback;
+  font-family: Virgin Atlantic-fallback;
   size-adjust: 100%;
   src: local('Arial');
 }
@@ -166,8 +160,8 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: #ffffff;
-  color: #e10a0a;
+  background-color: #e10a0a;
+  color: #ffffff;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -178,7 +172,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: #f0f0f0;
+  background-color: #b30808;
   cursor: pointer;
 }
 
@@ -190,9 +184,9 @@ button:disabled:hover {
 
 a.button.secondary,
 button.secondary {
-  background-color: #e10a0a;
+  background-color: transparent;
   border: 2px solid #e10a0a;
-  color: #ffffff;
+  color: #e10a0a;
 }
 
 main img {
@@ -214,7 +208,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 60px 0;
+  margin: 48px 0;
 }
 
 main > .section > div {
@@ -238,5 +232,5 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
-  padding: 60px 0;
+  padding: 48px 0;
 }
