@@ -9,10 +9,10 @@
   /* colors */
   --background-color: #ffffff;
   --light-color: #ffffff;
-  --dark-color: #660033;
-  --text-color: #4a4a4a;
-  --link-color: #660033;
-  --link-hover-color: #990033;
+  --dark-color: #4a0d2a;
+  --text-color: #4a0d2a;
+  --link-color: #e10a0a;
+  --link-hover-color: #b30808;
 
   /* fonts */
   --body-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
@@ -24,7 +24,7 @@
   --body-font-size-xs: 12px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 42px;
+  --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 36px;
   --heading-font-size-l: 28px;
   --heading-font-size-m: 22px;
@@ -58,7 +58,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 body.appear {
@@ -155,7 +155,7 @@ button {
   margin: 12px 0;
   border: 2px solid transparent;
   border-radius: 0px;
-  padding: 16px 32px;
+  padding: 14px 28px;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
@@ -163,7 +163,7 @@ button {
   text-align: center;
   text-decoration: none;
   background-color: #ffffff;
-  color: #e60033;
+  color: #e10a0a;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -187,8 +187,8 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  border: 2px solid #e10a0a;
+  color: #e10a0a;
 }
 
 main img {
