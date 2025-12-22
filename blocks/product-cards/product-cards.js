@@ -3,7 +3,7 @@ export default function decorate(block) {
   
   // First row is the section heading
   const headingRow = rows[0];
-  const headingText = headingRow.textContent.trim();
+  const headingText = headingRow.querySelector('div').textContent.trim();
   
   // Create section heading
   const sectionHeading = document.createElement('h2');
@@ -14,7 +14,7 @@ export default function decorate(block) {
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'cards-container';
   
-  // Process remaining rows as cards
+  // Process each card row (skip first row which is heading)
   for (let i = 1; i < rows.length; i++) {
     const row = rows[i];
     const cells = Array.from(row.children);
@@ -35,18 +35,18 @@ export default function decorate(block) {
     
     // Card title
     if (cells[1]) {
-      const titleDiv = document.createElement('h3');
-      titleDiv.className = 'card-title';
-      titleDiv.textContent = cells[1].textContent.trim();
-      card.appendChild(titleDiv);
+      const titleEl = document.createElement('h3');
+      titleEl.className = 'card-title';
+      titleEl.textContent = cells[1].textContent.trim();
+      card.appendChild(titleEl);
     }
     
     // Card description
     if (cells[2]) {
-      const descDiv = document.createElement('p');
-      descDiv.className = 'card-description';
-      descDiv.textContent = cells[2].textContent.trim();
-      card.appendChild(descDiv);
+      const descEl = document.createElement('p');
+      descEl.className = 'card-description';
+      descEl.textContent = cells[2].textContent.trim();
+      card.appendChild(descEl);
     }
     
     // Card CTA
@@ -64,7 +64,7 @@ export default function decorate(block) {
   }
   
   // Clear block and rebuild
-  block.innerHTML = '';
+  block.textContent = '';
   block.appendChild(sectionHeading);
   block.appendChild(cardsContainer);
 }
