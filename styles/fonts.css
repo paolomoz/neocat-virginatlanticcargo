@@ -1,48 +1,8 @@
 /* stylelint-disable max-line-length */
 @font-face {
-  font-family: 'gotham-bold';
+  font-family: 'Virgin Atlantic';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url('../fonts/gotham-bold-400.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'gotham-xlight';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/gotham-xlight-400.eot') format('woff2');
-}
-
-@font-face {
-  font-family: 'Gotham SSm 2r';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/gotham-ssm-2r-400.eot') format('woff2');
-}
-
-@font-face {
-  font-family: 'gotham-light';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/gotham-light-400.eot') format('woff2');
-}
-
-@font-face {
-  font-family: 'gotham-medium';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/gotham-medium-400.eot') format('woff2');
-}
-
-@font-face {
-  font-family: 'gotham-thin';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/gotham-thin-400.eot') format('woff2');
+  src: url('fonts/gotham-bold-400.ttf') format('truetype');
 }
