@@ -9,15 +9,15 @@
 :root {
   /* colors */
   --background-color: #ffffff;
-  --light-color: #f8f8f8;
-  --dark-color: #660033;
-  --text-color: #4a4a4a;
-  --link-color: #660033;
-  --link-hover-color: #4a0024;
+  --light-color: #ffffff;
+  --dark-color: #4a0d2b;
+  --text-color: #4a0d2b;
+  --link-color: #e00034;
+  --link-hover-color: #b8002a;
 
   /* fonts */
-  --body-font-family: Helvetica Neue, Arial, sans-serif;
-  --heading-font-family: Helvetica Neue, Arial, sans-serif;
+  --body-font-family: Virgin Atlantic Sans, Helvetica, Arial, sans-serif;
+  --heading-font-family: Virgin Atlantic Sans, Helvetica, Arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -25,7 +25,7 @@
   --body-font-size-xs: 12px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 42px;
+  --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 36px;
   --heading-font-size-l: 28px;
   --heading-font-size-m: 22px;
@@ -33,12 +33,12 @@
   --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 90px;
+  --nav-height: 76px;
 }
 
 /* fallback fonts */
 @font-face {
-  font-family: Helvetica Neue-fallback;
+  font-family: Virgin Atlantic Sans-fallback;
   size-adjust: 100%;
   src: local('Arial');
 }
@@ -59,7 +59,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 body.appear {
@@ -163,8 +163,8 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: #ffffff;
-  color: #e60033;
+  background-color: #e00034;
+  color: #ffffff;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -175,7 +175,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: #f0f0f0;
+  background-color: #b8002a;
   cursor: pointer;
 }
 
@@ -188,8 +188,8 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: transparent;
-  border: 2px solid #e60033;
-  color: #e60033;
+  border: 2px solid #e00034;
+  color: #e00034;
 }
 
 main img {
