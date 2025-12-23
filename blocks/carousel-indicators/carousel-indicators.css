@@ -1,0 +1,41 @@
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background-color: #c8102e;
+}
+
+.carousel-indicators__dots {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-indicators__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicators__dot--active {
+  background-color: #000000;
+}
+
+.carousel-indicators__dot:not(.carousel-indicators__dot--active) {
+  background-color: #c8102e;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.carousel-indicators__dot:nth-child(2) {
+  background-color: #ff4444;
+}
+
+.carousel-indicators__dot:nth-child(3) {
+  background-color: #ff6666;
+}
