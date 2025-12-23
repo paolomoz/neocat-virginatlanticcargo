@@ -1,0 +1,136 @@
+.holiday-hero {
+  background-color: #DA0530;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.holiday-hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.holiday-hero .content-box {
+  background-color: #ffffff;
+  padding: 40px;
+  max-width: 450px;
+  position: relative;
+  z-index: 2;
+}
+
+.holiday-hero .content-box h2 {
+  color: #DA0530;
+  font-size: 1.9em;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.holiday-hero .content-box p {
+  color: #DA0530;
+  font-size: 1.2em;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
+.holiday-hero .content-box .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #DA0530;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.holiday-hero .content-box .cta-button:hover {
+  background-color: #b8042a;
+}
+
+.holiday-hero .content-box .cta-button::after {
+  content: '→';
+  font-size: 1.1em;
+}
+
+.holiday-hero .image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.holiday-hero .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.holiday-hero .snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.holiday-hero .snowflake {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 40px;
+}
+
+.holiday-hero .snowflake:nth-child(1) {
+  top: 10%;
+  left: 5%;
+}
+
+.holiday-hero .snowflake:nth-child(2) {
+  top: 30%;
+  left: 2%;
+}
+
+.holiday-hero .snowflake:nth-child(3) {
+  top: 60%;
+  left: 8%;
+}
+
+.holiday-hero .snowflake:nth-child(4) {
+  top: 20%;
+  right: 35%;
+}
+
+.holiday-hero .snowflake:nth-child(5) {
+  top: 55%;
+  right: 40%;
+}
+
+@media (max-width: 768px) {
+  .holiday-hero {
+    padding: 40px 20px;
+  }
+  
+  .holiday-hero-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .holiday-hero .content-box {
+    max-width: 100%;
+  }
+  
+  .holiday-hero .image-container {
+    order: -1;
+  }
+}
