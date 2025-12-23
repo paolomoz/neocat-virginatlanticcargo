@@ -46,13 +46,13 @@
 }
 
 /* Color values from design system */
-.color-swatch [data-color="primary"] { background-color: #e00034; color: #fff; }
-.color-swatch [data-color="secondary"] { background-color: #4a0d2b; color: #fff; }
-.color-swatch [data-color="link"] { background-color: #e00034; color: #fff; }
-.color-swatch [data-color="text"] { background-color: #4a0d2b; color: #fff; }
-.color-swatch [data-color="background"] { background-color: #ffffff; color: #4a0d2b; }
-.color-swatch [data-color="dark"] { background-color: #4a0d2b; color: #fff; }
-.color-swatch [data-color="light"] { background-color: #ffffff; color: #4a0d2b; }
+.color-swatch [data-color="primary"] { background-color: #c60c46; color: #fff; }
+.color-swatch [data-color="secondary"] { background-color: #4a0043; color: #fff; }
+.color-swatch [data-color="link"] { background-color: #c60c46; color: #fff; }
+.color-swatch [data-color="text"] { background-color: #4a0043; color: #fff; }
+.color-swatch [data-color="background"] { background-color: #ffffff; color: #4a0043; }
+.color-swatch [data-color="dark"] { background-color: #4a0043; color: #fff; }
+.color-swatch [data-color="light"] { background-color: #f8f9fa; color: #4a0043; }
 
 /* Type Scale Block */
 .type-scale {
@@ -113,7 +113,7 @@
 .spacing > div > div p:last-child {
   font-family: monospace;
   font-size: 14px;
-  color: var(--primary-color, #e00034);
+  color: var(--primary-color, #c60c46);
 }
 
 /* Border Radius Block */
@@ -134,7 +134,7 @@
   content: '';
   width: 60px;
   height: 60px;
-  background: var(--primary-color, #e00034);
+  background: var(--primary-color, #c60c46);
   border-radius: 4px;
 }
 
@@ -180,7 +180,7 @@
 
 /* Dark Section Style */
 main .section.dark {
-  background-color: #4a0d2b;
+  background-color: #4a0043;
   color: #fff;
   margin: 0;
   padding: 48px 0;
@@ -191,29 +191,31 @@ main .section.dark a:any-link {
 }
 
 main .section.dark a.button:any-link {
-  background-color: #e00034;
+  background-color: #c60c46;
   color: #fff;
 }
 
 /* Text Buttons Section */
 main .section.text-buttons a.button:any-link {
-  background-color: transparent;
-  color: #4a0d2b;
-  padding: 0;
-  margin: 8px 0;
-  border: none;
-  border-radius: 0;
-  font-weight: 400;
-  text-decoration: none;
+  background-color: transparent !important;
+  color: #4a0043 !important;
+  padding: 0 !important;
+  margin: 8px 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  white-space: normal !important;
 }
 
 main .section.text-buttons a.button::after {
-  content: ' →';
-  color: #e00034;
+  content: ' \2192';
+  color: #c60c46;
+  margin-left: 4px;
 }
 
 main .section.text-buttons a.button:hover {
-  background-color: transparent;
-  color: #4a0d2b;
-  text-decoration: underline;
+  background-color: transparent !important;
+  color: #4a0043 !important;
+  text-decoration: underline !important;
 }
