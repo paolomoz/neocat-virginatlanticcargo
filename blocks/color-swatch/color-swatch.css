@@ -1,0 +1,13 @@
+.color-swatch {
+  margin-bottom: 24px;
+}
+
+.color-swatch > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.color-swatch > div > div {
+  flex: 0 0 140px;
+}
