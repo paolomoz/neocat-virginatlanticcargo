@@ -9,15 +9,15 @@
 :root {
   /* colors */
   --background-color: #ffffff;
-  --light-color: #ffffff;
-  --dark-color: #4a1c5a;
-  --text-color: #4a1c5a;
-  --link-color: #e30a17;
-  --link-hover-color: #b30813;
+  --light-color: #f5f5f5;
+  --dark-color: #1a1a1a;
+  --text-color: #1a1a1a;
+  --link-color: #1a1a1a;
+  --link-hover-color: #000000;
 
   /* fonts */
-  --body-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
-  --heading-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
+  --body-font-family: Georgia, serif;
+  --heading-font-family: Asar, Georgia, serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -26,19 +26,25 @@
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 36px;
-  --heading-font-size-l: 28px;
-  --heading-font-size-m: 22px;
+  --heading-font-size-xl: 40px;
+  --heading-font-size-l: 36px;
+  --heading-font-size-m: 24px;
   --heading-font-size-s: 18px;
   --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 76px;
+  --nav-height: 80px;
 }
 
 /* fallback fonts */
 @font-face {
-  font-family: Virgin Atlantic-fallback;
+  font-family: Georgia-fallback;
+  size-adjust: 100%;
+  src: local('Arial');
+}
+
+@font-face {
+  font-family: Asar-fallback;
   size-adjust: 100%;
   src: local('Arial');
 }
@@ -59,7 +65,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 body.appear {
@@ -89,7 +95,7 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
 }
@@ -155,16 +161,16 @@ button {
   max-width: 100%;
   margin: 12px 0;
   border: 2px solid transparent;
-  border-radius: 4px;
-  padding: 14px 28px;
+  border-radius: 0px;
+  padding: 16px 40px;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: #e30a17;
-  color: #ffffff;
+  background-color: #ffea00;
+  color: #1a1a1a;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -175,7 +181,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: #b30813;
+  background-color: #e6d400;
   cursor: pointer;
 }
 
@@ -188,8 +194,8 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: transparent;
-  border: 2px solid #e30a17;
-  color: #e30a17;
+  border: 2px solid #1a1a1a;
+  color: #1a1a1a;
 }
 
 main img {
@@ -211,7 +217,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 48px 0;
+  margin: 60px 0;
 }
 
 main > .section > div {
@@ -235,5 +241,5 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
-  padding: 48px 0;
+  padding: 60px 0;
 }
