@@ -9,10 +9,10 @@
   /* colors */
   --background-color: #ffffff;
   --light-color: #ffffff;
-  --dark-color: #4a0d2a;
-  --text-color: #4a0d2a;
-  --link-color: #d4145a;
-  --link-hover-color: #a01045;
+  --dark-color: #4a1c5c;
+  --text-color: #4a1c5c;
+  --link-color: #e10a0a;
+  --link-hover-color: #b30808;
 
   /* fonts */
   --body-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
@@ -154,7 +154,7 @@ button {
   max-width: 100%;
   margin: 12px 0;
   border: 2px solid transparent;
-  border-radius: 0px;
+  border-radius: 4px;
   padding: 14px 28px;
   font-family: var(--body-font-family);
   font-style: normal;
@@ -162,8 +162,8 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: #ffffff;
-  color: #d4145a;
+  background-color: #e10a0a;
+  color: #ffffff;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -174,7 +174,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: #f5f5f5;
+  background-color: #b30808;
   cursor: pointer;
 }
 
@@ -187,8 +187,8 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: transparent;
-  border: 2px solid #d4145a;
-  color: #d4145a;
+  border: 2px solid #e10a0a;
+  color: #e10a0a;
 }
 
 main img {
