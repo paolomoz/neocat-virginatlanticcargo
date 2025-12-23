@@ -9,15 +9,15 @@
 :root {
   /* colors */
   --background-color: #ffffff;
-  --light-color: #ffffff;
-  --dark-color: #e50040;
+  --light-color: #f8f8f8;
+  --dark-color: #660033;
   --text-color: #4a4a4a;
   --link-color: #660033;
   --link-hover-color: #4a0024;
 
   /* fonts */
-  --body-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
-  --heading-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
+  --body-font-family: Helvetica Neue, Arial, sans-serif;
+  --heading-font-family: Helvetica Neue, Arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -33,12 +33,12 @@
   --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 76px;
+  --nav-height: 90px;
 }
 
 /* fallback fonts */
 @font-face {
-  font-family: Virgin Atlantic-fallback;
+  font-family: Helvetica Neue-fallback;
   size-adjust: 100%;
   src: local('Arial');
 }
@@ -59,7 +59,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 body.appear {
@@ -163,8 +163,8 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: #e50040;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #e60033;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -175,7 +175,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: #c70038;
+  background-color: #f0f0f0;
   cursor: pointer;
 }
 
@@ -188,8 +188,8 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: transparent;
-  border: 2px solid #e50040;
-  color: #e50040;
+  border: 2px solid #e60033;
+  color: #e60033;
 }
 
 main img {
