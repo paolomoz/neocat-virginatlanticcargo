@@ -1,0 +1,125 @@
+.product-services-cards {
+  font-family: Gotham-Medium, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.6px;
+  color: rgb(51, 51, 51);
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.product-services-cards .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.product-services-cards .card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 540px;
+}
+
+.product-services-cards .card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+.product-services-cards .card h2 {
+  font-family: gotham-light, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  padding: 26px 0 12px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.product-services-cards .card p {
+  font-family: gotham-medium, sans-serif;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin: 0 0 16px 0;
+}
+
+.product-services-cards .card a {
+  font-family: gotham-medium, sans-serif;
+  font-size: 12px;
+  color: rgb(200, 16, 92);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.product-services-cards .card a::after {
+  content: '→';
+  font-size: 14px;
+}
+
+.product-services-cards .card a:hover {
+  text-decoration: underline;
+}
+
+.product-services-cards .section-heading {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.product-services-cards .section-heading h2 {
+  font-family: gotham-light, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.product-services-cards .booking-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.product-services-cards .booking-option {
+  flex: 1;
+  min-width: 280px;
+}
+
+.product-services-cards .booking-option h3 {
+  font-family: gotham-light, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 1.3;
+  margin: 0 0 12px 0;
+}
+
+.product-services-cards .booking-option p {
+  font-family: gotham-medium, sans-serif;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .product-services-cards .cards-container {
+    flex-direction: column;
+  }
+  
+  .product-services-cards .card {
+    max-width: 100%;
+  }
+  
+  .product-services-cards .booking-options {
+    flex-direction: column;
+  }
+}
