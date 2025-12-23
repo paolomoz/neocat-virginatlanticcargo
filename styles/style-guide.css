@@ -46,13 +46,13 @@
 }
 
 /* Color values from design system */
-.color-swatch [data-color="primary"] { background-color: #e30a17; color: #fff; }
-.color-swatch [data-color="secondary"] { background-color: #6b2c5f; color: #fff; }
-.color-swatch [data-color="link"] { background-color: #6b2c5f; color: #fff; }
+.color-swatch [data-color="primary"] { background-color: #e60033; color: #fff; }
+.color-swatch [data-color="secondary"] { background-color: #660033; color: #fff; }
+.color-swatch [data-color="link"] { background-color: #660033; color: #fff; }
 .color-swatch [data-color="text"] { background-color: #4a4a4a; color: #fff; }
 .color-swatch [data-color="background"] { background-color: #ffffff; color: #4a4a4a; }
-.color-swatch [data-color="dark"] { background-color: #4a4a4a; color: #fff; }
-.color-swatch [data-color="light"] { background-color: #f8f9fa; color: #4a4a4a; }
+.color-swatch [data-color="dark"] { background-color: #e60033; color: #fff; }
+.color-swatch [data-color="light"] { background-color: #ffffff; color: #4a4a4a; }
 
 /* Type Scale Block */
 .type-scale {
@@ -113,7 +113,7 @@
 .spacing > div > div p:last-child {
   font-family: monospace;
   font-size: 14px;
-  color: var(--primary-color, #e30a17);
+  color: var(--primary-color, #e60033);
 }
 
 /* Border Radius Block */
@@ -134,7 +134,7 @@
   content: '';
   width: 60px;
   height: 60px;
-  background: var(--primary-color, #e30a17);
+  background: var(--primary-color, #e60033);
   border-radius: 0px;
 }
 
@@ -180,7 +180,7 @@
 
 /* Dark Section Style */
 main .section.dark {
-  background-color: #4a4a4a;
+  background-color: #e60033;
   color: #fff;
   margin: 0;
   padding: 48px 0;
@@ -191,14 +191,14 @@ main .section.dark a:any-link {
 }
 
 main .section.dark a.button:any-link {
-  background-color: #e30a17;
+  background-color: #e60033;
   color: #fff;
 }
 
 /* Text Buttons Section - plain link-style buttons without background */
 main .section.text-buttons a.button:any-link {
   background-color: transparent !important;
-  color: #6b2c5f !important;
+  color: #660033 !important;
   padding: 0 !important;
   margin: 8px 0 !important;
   border: none !important;
@@ -210,6 +210,6 @@ main .section.text-buttons a.button:any-link {
 
 main .section.text-buttons a.button:hover {
   background-color: transparent !important;
-  color: #4a1d42 !important;
+  color: #990033 !important;
   text-decoration: underline !important;
 }

@@ -9,15 +9,15 @@
 :root {
   /* colors */
   --background-color: #ffffff;
-  --light-color: #f8f9fa;
-  --dark-color: #4a4a4a;
+  --light-color: #ffffff;
+  --dark-color: #e60033;
   --text-color: #4a4a4a;
-  --link-color: #6b2c5f;
-  --link-hover-color: #4a1d42;
+  --link-color: #660033;
+  --link-hover-color: #990033;
 
   /* fonts */
-  --body-font-family: Virgin Atlantic Sans, system-ui, sans-serif;
-  --heading-font-family: Virgin Atlantic Sans, system-ui, sans-serif;
+  --body-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
+  --heading-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -33,12 +33,12 @@
   --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 56px;
+  --nav-height: 76px;
 }
 
 /* fallback fonts */
 @font-face {
-  font-family: Virgin Atlantic Sans-fallback;
+  font-family: Virgin Atlantic-fallback;
   size-adjust: 100%;
   src: local('Arial');
 }
@@ -156,7 +156,7 @@ button {
   margin: 12px 0;
   border: 2px solid transparent;
   border-radius: 0px;
-  padding: 14px 28px;
+  padding: 16px 32px;
   font-family: var(--body-font-family);
   font-style: normal;
   font-weight: 500;
@@ -164,7 +164,7 @@ button {
   text-align: center;
   text-decoration: none;
   background-color: #ffffff;
-  color: #e30a17;
+  color: #e60033;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -188,8 +188,8 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: transparent;
-  border: 2px solid #6b2c5f;
-  color: #6b2c5f;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 main img {
