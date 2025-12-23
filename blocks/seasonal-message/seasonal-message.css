@@ -1,0 +1,62 @@
+.seasonal-message {
+  background-color: #DA0530;
+  padding: 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.seasonal-message-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+.seasonal-message-content h2 {
+  font-size: 1.9em;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.seasonal-message-content p {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.seasonal-message-decoration {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.seasonal-message-decoration svg {
+  height: 100%;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .seasonal-message {
+    padding: 30px 20px;
+  }
+  
+  .seasonal-message-content h2 {
+    font-size: 1.5em;
+  }
+  
+  .seasonal-message-content p {
+    font-size: 1em;
+  }
+  
+  .seasonal-message-decoration {
+    opacity: 0.3;
+  }
+}
