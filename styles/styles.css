@@ -9,15 +9,15 @@
 :root {
   /* colors */
   --background-color: #ffffff;
-  --light-color: #ffffff;
-  --dark-color: #4a0d2b;
-  --text-color: #4a0d2b;
+  --light-color: #f8f8f8;
+  --dark-color: #4a1a4a;
+  --text-color: #4a1a4a;
   --link-color: #e10a0a;
   --link-hover-color: #b30808;
 
   /* fonts */
-  --body-font-family: Virgin Atlantic Sans, Helvetica, Arial, sans-serif;
-  --heading-font-family: Virgin Atlantic Sans, Helvetica, Arial, sans-serif;
+  --body-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
+  --heading-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -26,10 +26,10 @@
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
+  --heading-font-size-xl: 36px;
   --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
+  --heading-font-size-s: 18px;
   --heading-font-size-xs: 16px;
 
   /* nav height */
@@ -38,7 +38,7 @@
 
 /* fallback fonts */
 @font-face {
-  font-family: Virgin Atlantic Sans-fallback;
+  font-family: Virgin Atlantic-fallback;
   size-adjust: 100%;
   src: local('Arial');
 }
@@ -155,7 +155,7 @@ button {
   max-width: 100%;
   margin: 12px 0;
   border: 2px solid transparent;
-  border-radius: 4px;
+  border-radius: 25px;
   padding: 14px 28px;
   font-family: var(--body-font-family);
   font-style: normal;
