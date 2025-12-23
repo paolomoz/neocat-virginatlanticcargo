@@ -2,6 +2,22 @@
 @font-face {
   font-family: 'Virgin Atlantic';
   font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/gotham-2r-400.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Virgin Atlantic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/gotham-3r-400.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Virgin Atlantic';
+  font-style: normal;
   font-weight: 700;
   font-display: swap;
   src: url('fonts/gotham-bold-400.ttf') format('truetype');
