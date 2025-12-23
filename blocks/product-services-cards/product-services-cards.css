@@ -1,0 +1,113 @@
+.product-services-cards {
+  display: block;
+  font-family: 'Gotham-Medium', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15.6px;
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.product-services-cards .cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-services-cards .product-card {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.product-services-cards .product-card .card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  display: block;
+  object-fit: cover;
+  max-height: 280px;
+}
+
+.product-services-cards .product-card .card-title {
+  font-family: 'gotham-light', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  text-align: left;
+  padding: 26px 0 12px;
+  margin: -6px 0 0 0;
+  line-height: 32.5px;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.product-services-cards .product-card .card-description {
+  font-family: 'gotham-medium', sans-serif;
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.product-services-cards .product-card .card-cta {
+  font-family: 'gotham-medium', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(190, 0, 80);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-services-cards .product-card .card-cta::after {
+  content: '→';
+  font-size: 14px;
+}
+
+.product-services-cards .product-card .card-cta:hover {
+  text-decoration: underline;
+}
+
+.product-services-cards .section-title {
+  font-family: 'gotham-light', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  text-align: left;
+  padding: 40px 0 24px;
+  margin: 0 auto;
+  max-width: 1200px;
+  line-height: 1.3;
+}
+
+.product-services-cards .booking-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.product-services-cards .booking-card .card-title {
+  font-family: 'gotham-light', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  padding: 0 0 12px;
+  margin: 0;
+  line-height: 26px;
+}
+
+@media (max-width: 768px) {
+  .product-services-cards .cards-container,
+  .product-services-cards .booking-section {
+    grid-template-columns: 1fr;
+  }
+}
