@@ -1,70 +1,70 @@
 export default function decorate(block) {
-  const rows = Array.from(block.children);
+  const rows = [...block.children];
   
-  // First row is the section heading
-  const headingRow = rows[0];
-  const headingText = headingRow.querySelector('div').textContent.trim();
+  // First row is the header
+  const headerRow = rows[0];
+  const headerText = headerRow?.children[0]?.textContent?.trim() || '';
   
-  // Create section heading
-  const sectionHeading = document.createElement('h2');
-  sectionHeading.className = 'section-heading';
-  sectionHeading.textContent = headingText;
+  // Remaining rows are cards
+  const cardRows = rows.slice(1);
   
-  // Create cards container
+  // Build the rendered structure
+  const sectionHeader = document.createElement('div');
+  sectionHeader.className = 'section-header';
+  sectionHeader.innerHTML = `<h2>${headerText}</h2>`;
+  
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'cards-container';
   
-  // Process each card row (skip first row which is heading)
-  for (let i = 1; i < rows.length; i++) {
-    const row = rows[i];
-    const cells = Array.from(row.children);
+  cardRows.forEach((row) => {
+    const cells = [...row.children];
     
     const card = document.createElement('div');
     card.className = 'card';
     
-    // Card image
-    if (cells[0]) {
-      const imageDiv = document.createElement('div');
-      imageDiv.className = 'card-image';
-      const img = cells[0].querySelector('img');
-      if (img) {
-        imageDiv.appendChild(img.cloneNode(true));
-      }
-      card.appendChild(imageDiv);
+    // Image (cell 0)
+    const imageCell = cells[0];
+    const img = imageCell?.querySelector('img');
+    if (img) {
+      const cardImage = document.createElement('div');
+      cardImage.className = 'card-image';
+      cardImage.appendChild(img.cloneNode(true));
+      card.appendChild(cardImage);
     }
     
-    // Card title
-    if (cells[1]) {
-      const titleEl = document.createElement('h3');
-      titleEl.className = 'card-title';
-      titleEl.textContent = cells[1].textContent.trim();
-      card.appendChild(titleEl);
+    // Title (cell 1)
+    const titleText = cells[1]?.textContent?.trim() || '';
+    if (titleText) {
+      const cardTitle = document.createElement('h3');
+      cardTitle.className = 'card-title';
+      cardTitle.textContent = titleText;
+      card.appendChild(cardTitle);
     }
     
-    // Card description
-    if (cells[2]) {
-      const descEl = document.createElement('p');
-      descEl.className = 'card-description';
-      descEl.textContent = cells[2].textContent.trim();
-      card.appendChild(descEl);
+    // Description (cell 2)
+    const descText = cells[2]?.textContent?.trim() || '';
+    if (descText) {
+      const cardDesc = document.createElement('p');
+      cardDesc.className = 'card-description';
+      cardDesc.textContent = descText;
+      card.appendChild(cardDesc);
     }
     
-    // Card CTA
-    if (cells[3]) {
-      const ctaDiv = document.createElement('div');
-      ctaDiv.className = 'card-cta';
-      const link = cells[3].querySelector('a');
-      if (link) {
-        ctaDiv.appendChild(link.cloneNode(true));
-      }
-      card.appendChild(ctaDiv);
+    // Link (cell 3)
+    const linkCell = cells[3];
+    const link = linkCell?.querySelector('a');
+    if (link) {
+      const cardLink = document.createElement('div');
+      cardLink.className = 'card-link';
+      cardLink.appendChild(link.cloneNode(true));
+      card.appendChild(cardLink);
     }
     
     cardsContainer.appendChild(card);
-  }
+  });
   
-  // Clear block and rebuild
-  block.textContent = '';
-  block.appendChild(sectionHeading);
+  // Clear and rebuild block
+  block.innerHTML = '';
+  block.appendChild(sectionHeader);
   block.appendChild(cardsContainer);
 }
