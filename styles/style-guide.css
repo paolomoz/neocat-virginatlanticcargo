@@ -46,13 +46,13 @@
 }
 
 /* Color values from design system */
-.color-swatch [data-color="primary"] { background-color: #e31837; color: #fff; }
-.color-swatch [data-color="secondary"] { background-color: #4a1c4e; color: #fff; }
-.color-swatch [data-color="link"] { background-color: #e31837; color: #fff; }
-.color-swatch [data-color="text"] { background-color: #4a1c4e; color: #fff; }
-.color-swatch [data-color="background"] { background-color: #ffffff; color: #4a1c4e; }
-.color-swatch [data-color="dark"] { background-color: #4a1c4e; color: #fff; }
-.color-swatch [data-color="light"] { background-color: #ffffff; color: #4a1c4e; }
+.color-swatch [data-color="primary"] { background-color: #e60028; color: #fff; }
+.color-swatch [data-color="secondary"] { background-color: #4a1c5a; color: #fff; }
+.color-swatch [data-color="link"] { background-color: #e60028; color: #fff; }
+.color-swatch [data-color="text"] { background-color: #4a1c5a; color: #fff; }
+.color-swatch [data-color="background"] { background-color: #ffffff; color: #4a1c5a; }
+.color-swatch [data-color="dark"] { background-color: #2d0a36; color: #fff; }
+.color-swatch [data-color="light"] { background-color: #ffffff; color: #4a1c5a; }
 
 /* Type Scale Block */
 .type-scale {
@@ -113,7 +113,7 @@
 .spacing > div > div p:last-child {
   font-family: monospace;
   font-size: 14px;
-  color: var(--primary-color, #e31837);
+  color: var(--primary-color, #e60028);
 }
 
 /* Border Radius Block */
@@ -134,8 +134,8 @@
   content: '';
   width: 60px;
   height: 60px;
-  background: var(--primary-color, #e31837);
-  border-radius: 4px;
+  background: var(--primary-color, #e60028);
+  border-radius: 25px;
 }
 
 /* Cards Block Enhancement */
@@ -180,7 +180,7 @@
 
 /* Dark Section Style */
 main .section.dark {
-  background-color: #4a1c4e;
+  background-color: #2d0a36;
   color: #fff;
   margin: 0;
   padding: 48px 0;
@@ -191,6 +191,6 @@ main .section.dark a:any-link {
 }
 
 main .section.dark a.button:any-link {
-  background-color: #e31837;
+  background-color: #e60028;
   color: #fff;
 }
