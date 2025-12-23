@@ -1,0 +1,91 @@
+.seasonal-message {
+  background-color: #DA0530;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.seasonal-message-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seasonal-message-content {
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+.seasonal-message-content h2 {
+  font-size: 1.9em;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.seasonal-message-content p {
+  font-size: 1.2em;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.seasonal-message-decoration {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seasonal-message-decoration svg {
+  width: 100%;
+  height: auto;
+}
+
+.decoration-circle {
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 2;
+  fill: none;
+}
+
+.decoration-arc {
+  stroke: rgba(255, 255, 255, 0.3);
+  stroke-width: 2;
+  fill: none;
+}
+
+.snowflake {
+  fill: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .seasonal-message-wrapper {
+    flex-direction: column;
+  }
+  
+  .seasonal-message-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .seasonal-message-content h2 {
+    font-size: 1.5em;
+  }
+  
+  .seasonal-message-content p {
+    font-size: 1em;
+  }
+  
+  .seasonal-message-decoration {
+    display: none;
+  }
+}
