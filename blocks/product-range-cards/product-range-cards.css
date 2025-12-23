@@ -1,0 +1,107 @@
+.product-range-cards-wrapper {
+  background-color: rgb(255, 255, 255);
+  padding: 40px 20px 60px;
+  font-family: Gotham-Medium, Arial, sans-serif;
+}
+
+.product-range-cards {
+  max-width: 1425px;
+  margin: 0 auto;
+}
+
+.product-range-cards > div:first-child {
+  margin-bottom: 30px;
+}
+
+.product-range-cards > div:first-child > div {
+  font-family: gotham-light, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  text-align: left;
+  padding: 26px 0 12px;
+}
+
+.product-range-cards .cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.product-range-cards .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-range-cards .card-image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.product-range-cards .card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-range-cards .card-title {
+  font-family: gotham-light, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  line-height: 32.5px;
+  margin-bottom: 16px;
+}
+
+.product-range-cards .card-description {
+  font-family: gotham-medium, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  line-height: 15.6px;
+  text-align: left;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.product-range-cards .card-cta a {
+  font-family: gotham-medium, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(97, 18, 107);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-range-cards .card-cta a::after {
+  content: '→';
+  color: rgb(190, 0, 100);
+  font-size: 14px;
+}
+
+.product-range-cards .card-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .product-range-cards .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-range-cards .cards-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .product-range-cards > div:first-child > div {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
