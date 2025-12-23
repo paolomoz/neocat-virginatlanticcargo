@@ -1,70 +1,39 @@
 export default function decorate(block) {
-  const rows = Array.from(block.children);
+  const rows = [...block.children];
   
-  // First row is the section heading
+  // First row is the heading
   const headingRow = rows[0];
-  const headingText = headingRow.querySelector('div').textContent.trim();
+  const headingText = headingRow?.querySelector('div')?.textContent?.trim() || '';
   
-  // Create section heading
-  const sectionHeading = document.createElement('h2');
-  sectionHeading.className = 'section-heading';
-  sectionHeading.textContent = headingText;
+  // Remaining rows are cards
+  const cardRows = rows.slice(1);
   
-  // Create cards container
-  const cardsContainer = document.createElement('div');
-  cardsContainer.className = 'cards-container';
+  const cards = cardRows.map(row => {
+    const cells = [...row.children];
+    const image = cells[0]?.querySelector('img');
+    const title = cells[1]?.textContent?.trim() || '';
+    const description = cells[2]?.textContent?.trim() || '';
+    const link = cells[3]?.querySelector('a');
+    
+    return { image, title, description, link };
+  });
   
-  // Process each card row (skip first row which is heading)
-  for (let i = 1; i < rows.length; i++) {
-    const row = rows[i];
-    const cells = Array.from(row.children);
-    
-    const card = document.createElement('div');
-    card.className = 'card';
-    
-    // Card image
-    if (cells[0]) {
-      const imageDiv = document.createElement('div');
-      imageDiv.className = 'card-image';
-      const img = cells[0].querySelector('img');
-      if (img) {
-        imageDiv.appendChild(img.cloneNode(true));
-      }
-      card.appendChild(imageDiv);
-    }
-    
-    // Card title
-    if (cells[1]) {
-      const titleEl = document.createElement('h3');
-      titleEl.className = 'card-title';
-      titleEl.textContent = cells[1].textContent.trim();
-      card.appendChild(titleEl);
-    }
-    
-    // Card description
-    if (cells[2]) {
-      const descEl = document.createElement('p');
-      descEl.className = 'card-description';
-      descEl.textContent = cells[2].textContent.trim();
-      card.appendChild(descEl);
-    }
-    
-    // Card CTA
-    if (cells[3]) {
-      const ctaDiv = document.createElement('div');
-      ctaDiv.className = 'card-cta';
-      const link = cells[3].querySelector('a');
-      if (link) {
-        ctaDiv.appendChild(link.cloneNode(true));
-      }
-      card.appendChild(ctaDiv);
-    }
-    
-    cardsContainer.appendChild(card);
-  }
+  // Build the rendered HTML
+  const renderedHTML = `
+    <h2 class="main-heading">${headingText}</h2>
+    <div class="cards-container">
+      ${cards.map(card => `
+        <div class="card">
+          <div class="card-image">
+            ${card.image ? card.image.outerHTML : ''}
+          </div>
+          <h3 class="card-title">${card.title}</h3>
+          <p class="card-description">${card.description}</p>
+          ${card.link ? `<a href="${card.link.href}" class="card-link">${card.link.textContent.trim()}</a>` : ''}
+        </div>
+      `).join('')}
+    </div>
+  `;
   
-  // Clear block and rebuild
-  block.textContent = '';
-  block.appendChild(sectionHeading);
-  block.appendChild(cardsContainer);
+  block.innerHTML = renderedHTML;
 }
