@@ -1,0 +1,70 @@
+.holiday-message-wrapper {
+  background-color: #DA0530;
+  padding: 40px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.holiday-message-container {
+  max-width: 600px;
+}
+
+.holiday-message-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #6B0F2B;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.holiday-message-text {
+  font-size: 1.2rem;
+  color: #6B0F2B;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.holiday-message-decoration {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 200px;
+}
+
+.holiday-message-decoration .sleigh {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 150px;
+  height: 120px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 60px 0;
+}
+
+.holiday-message-decoration .snowflakes {
+  position: absolute;
+  right: 180px;
+  top: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .holiday-message-wrapper {
+    padding: 30px 20px;
+  }
+
+  .holiday-message-title {
+    font-size: 1.6rem;
+  }
+
+  .holiday-message-text {
+    font-size: 1rem;
+  }
+
+  .holiday-message-decoration {
+    display: none;
+  }
+}
