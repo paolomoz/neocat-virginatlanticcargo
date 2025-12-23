@@ -9,15 +9,15 @@
 :root {
   /* colors */
   --background-color: #ffffff;
-  --light-color: #f8f9fa;
-  --dark-color: #4a0043;
-  --text-color: #4a0043;
-  --link-color: #c60c46;
-  --link-hover-color: #a00a38;
+  --light-color: #ffffff;
+  --dark-color: #4a1c5a;
+  --text-color: #4a1c5a;
+  --link-color: #e30a17;
+  --link-hover-color: #b30813;
 
   /* fonts */
-  --body-font-family: Virgin Atlantic, system-ui, sans-serif;
-  --heading-font-family: Virgin Atlantic, system-ui, sans-serif;
+  --body-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
+  --heading-font-family: Virgin Atlantic, Helvetica, Arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 16px;
@@ -26,14 +26,14 @@
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
-  --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
+  --heading-font-size-xl: 36px;
+  --heading-font-size-l: 28px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 95px;
+  --nav-height: 76px;
 }
 
 /* fallback fonts */
@@ -163,7 +163,7 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: #c60c46;
+  background-color: #e30a17;
   color: #ffffff;
   cursor: pointer;
   overflow: hidden;
@@ -175,7 +175,7 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: #a00a38;
+  background-color: #b30813;
   cursor: pointer;
 }
 
@@ -188,8 +188,8 @@ button:disabled:hover {
 a.button.secondary,
 button.secondary {
   background-color: transparent;
-  border: 2px solid #c60c46;
-  color: #c60c46;
+  border: 2px solid #e30a17;
+  color: #e30a17;
 }
 
 main img {
@@ -211,7 +211,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 48px 0;
 }
 
 main > .section > div {
@@ -235,5 +235,5 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
-  padding: 40px 0;
+  padding: 48px 0;
 }
