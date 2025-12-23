@@ -1,0 +1,160 @@
+.holiday-hero {
+  background-color: #DA0530;
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.holiday-hero .hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.holiday-hero .content-box {
+  background-color: #ffffff;
+  padding: 40px;
+  max-width: 480px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.holiday-hero .content-box h2 {
+  color: #DA0530;
+  font-size: 1.9em;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.holiday-hero .content-box p {
+  color: #DA0530;
+  font-size: 1.2em;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+}
+
+.holiday-hero .cta-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #DA0530;
+  color: #ffffff;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.holiday-hero .cta-button:hover {
+  background-color: #b8042a;
+}
+
+.holiday-hero .cta-button .arrow {
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+.holiday-hero .image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.holiday-hero .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.holiday-hero .snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.holiday-hero .snowflake {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 40px;
+}
+
+.holiday-hero .snowflake:nth-child(1) {
+  top: 10%;
+  left: 5%;
+}
+
+.holiday-hero .snowflake:nth-child(2) {
+  top: 50%;
+  left: 8%;
+}
+
+.holiday-hero .snowflake:nth-child(3) {
+  top: 70%;
+  left: 45%;
+}
+
+.holiday-hero .snowflake:nth-child(4) {
+  top: 15%;
+  right: 25%;
+}
+
+.holiday-hero .snowflake:nth-child(5) {
+  top: 55%;
+  right: 15%;
+}
+
+.holiday-hero .carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.holiday-hero .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.holiday-hero .dot.active {
+  background-color: #ffffff;
+}
+
+.holiday-hero .dot.dark {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .holiday-hero {
+    padding: 40px 20px;
+  }
+
+  .holiday-hero .hero-container {
+    flex-direction: column;
+  }
+
+  .holiday-hero .content-box {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .holiday-hero .content-box h2 {
+    font-size: 1.5em;
+  }
+
+  .holiday-hero .content-box p {
+    font-size: 1em;
+  }
+}
