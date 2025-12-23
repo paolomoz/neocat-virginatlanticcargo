@@ -1,70 +1,79 @@
 export default function decorate(block) {
-  const rows = Array.from(block.children);
+  const rows = [...block.children];
   
-  // First row is the section heading
-  const headingRow = rows[0];
-  const headingText = headingRow.querySelector('div').textContent.trim();
+  // First row is the header
+  const headerRow = rows[0];
+  const headerText = headerRow?.querySelector('div')?.textContent?.trim() || '';
   
-  // Create section heading
-  const sectionHeading = document.createElement('h2');
-  sectionHeading.className = 'section-heading';
-  sectionHeading.textContent = headingText;
+  // Remaining rows are cards
+  const cardRows = rows.slice(1);
+  
+  // Build rendered structure
+  const rendered = document.createElement('div');
+  
+  // Add section header
+  if (headerText) {
+    const sectionHeader = document.createElement('div');
+    sectionHeader.className = 'section-header';
+    const h2 = document.createElement('h2');
+    h2.textContent = headerText;
+    sectionHeader.appendChild(h2);
+    rendered.appendChild(sectionHeader);
+  }
   
   // Create cards container
   const cardsContainer = document.createElement('div');
   cardsContainer.className = 'cards-container';
   
-  // Process each card row (skip first row which is heading)
-  for (let i = 1; i < rows.length; i++) {
-    const row = rows[i];
-    const cells = Array.from(row.children);
+  cardRows.forEach((row) => {
+    const cells = [...row.children];
+    if (cells.length < 4) return;
     
     const card = document.createElement('div');
     card.className = 'card';
     
-    // Card image
-    if (cells[0]) {
-      const imageDiv = document.createElement('div');
-      imageDiv.className = 'card-image';
-      const img = cells[0].querySelector('img');
-      if (img) {
-        imageDiv.appendChild(img.cloneNode(true));
-      }
-      card.appendChild(imageDiv);
+    // Image
+    const imageCell = cells[0];
+    const img = imageCell.querySelector('img');
+    if (img) {
+      const cardImage = document.createElement('div');
+      cardImage.className = 'card-image';
+      cardImage.appendChild(img.cloneNode(true));
+      card.appendChild(cardImage);
     }
     
-    // Card title
-    if (cells[1]) {
-      const titleEl = document.createElement('h3');
-      titleEl.className = 'card-title';
-      titleEl.textContent = cells[1].textContent.trim();
-      card.appendChild(titleEl);
-    }
+    // Title
+    const titleCell = cells[1];
+    const cardTitle = document.createElement('h3');
+    cardTitle.className = 'card-title';
+    cardTitle.textContent = titleCell.textContent.trim();
+    card.appendChild(cardTitle);
     
-    // Card description
-    if (cells[2]) {
-      const descEl = document.createElement('p');
-      descEl.className = 'card-description';
-      descEl.textContent = cells[2].textContent.trim();
-      card.appendChild(descEl);
-    }
+    // Description
+    const descCell = cells[2];
+    const cardDesc = document.createElement('p');
+    cardDesc.className = 'card-description';
+    cardDesc.textContent = descCell.textContent.trim();
+    card.appendChild(cardDesc);
     
-    // Card CTA
-    if (cells[3]) {
-      const ctaDiv = document.createElement('div');
-      ctaDiv.className = 'card-cta';
-      const link = cells[3].querySelector('a');
-      if (link) {
-        ctaDiv.appendChild(link.cloneNode(true));
-      }
-      card.appendChild(ctaDiv);
+    // Link
+    const linkCell = cells[3];
+    const link = linkCell.querySelector('a');
+    if (link) {
+      const cardLink = document.createElement('div');
+      cardLink.className = 'card-link';
+      const newLink = document.createElement('a');
+      newLink.href = link.href;
+      newLink.textContent = link.textContent.trim();
+      cardLink.appendChild(newLink);
+      card.appendChild(cardLink);
     }
     
     cardsContainer.appendChild(card);
-  }
+  });
   
-  // Clear block and rebuild
-  block.textContent = '';
-  block.appendChild(sectionHeading);
-  block.appendChild(cardsContainer);
+  rendered.appendChild(cardsContainer);
+  
+  block.innerHTML = '';
+  block.appendChild(rendered);
 }
