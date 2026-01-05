@@ -1,70 +1,25 @@
 export default function decorate(block) {
-  const rows = Array.from(block.children);
+  const rows = [...block.children];
   
-  // First row is the section heading
-  const headingRow = rows[0];
-  const headingText = headingRow.querySelector('div').textContent.trim();
-  
-  // Create section heading
-  const sectionHeading = document.createElement('h2');
-  sectionHeading.className = 'section-heading';
-  sectionHeading.textContent = headingText;
-  
-  // Create cards container
-  const cardsContainer = document.createElement('div');
-  cardsContainer.className = 'cards-container';
-  
-  // Process each card row (skip first row which is heading)
-  for (let i = 1; i < rows.length; i++) {
-    const row = rows[i];
-    const cells = Array.from(row.children);
+  rows.forEach((row) => {
+    const cells = [...row.children];
     
-    const card = document.createElement('div');
-    card.className = 'card';
+    row.classList.add('card');
     
-    // Card image
     if (cells[0]) {
-      const imageDiv = document.createElement('div');
-      imageDiv.className = 'card-image';
-      const img = cells[0].querySelector('img');
-      if (img) {
-        imageDiv.appendChild(img.cloneNode(true));
-      }
-      card.appendChild(imageDiv);
+      cells[0].classList.add('card-image');
     }
     
-    // Card title
     if (cells[1]) {
-      const titleEl = document.createElement('h3');
-      titleEl.className = 'card-title';
-      titleEl.textContent = cells[1].textContent.trim();
-      card.appendChild(titleEl);
+      cells[1].classList.add('card-title');
     }
     
-    // Card description
     if (cells[2]) {
-      const descEl = document.createElement('p');
-      descEl.className = 'card-description';
-      descEl.textContent = cells[2].textContent.trim();
-      card.appendChild(descEl);
+      cells[2].classList.add('card-description');
     }
     
-    // Card CTA
     if (cells[3]) {
-      const ctaDiv = document.createElement('div');
-      ctaDiv.className = 'card-cta';
-      const link = cells[3].querySelector('a');
-      if (link) {
-        ctaDiv.appendChild(link.cloneNode(true));
-      }
-      card.appendChild(ctaDiv);
+      cells[3].classList.add('card-cta');
     }
-    
-    cardsContainer.appendChild(card);
-  }
-  
-  // Clear block and rebuild
-  block.textContent = '';
-  block.appendChild(sectionHeading);
-  block.appendChild(cardsContainer);
+  });
 }
