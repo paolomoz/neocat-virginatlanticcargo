@@ -1,74 +1,88 @@
 export default function decorate(block) {
   const rows = Array.from(block.children);
-  
-  let backgroundImage = '';
-  let heading = '';
-  let description = '';
-  let ctaLink = '';
-  let ctaText = '';
+  const slides = [];
 
-  rows.forEach(row => {
+  rows.forEach((row, index) => {
     const cells = Array.from(row.children);
-    if (cells.length >= 2) {
-      const label = cells[0].textContent.trim().toLowerCase();
-      const content = cells[1];
+    const imageCell = cells[0];
+    const contentCell = cells[1];
 
-      switch (label) {
-        case 'background':
-          const img = content.querySelector('img');
-          if (img) {
-            backgroundImage = img.outerHTML;
-          }
-          break;
-        case 'heading':
-          heading = content.textContent.trim();
-          break;
-        case 'description':
-          description = content.textContent.trim();
-          break;
-        case 'cta':
-          const link = content.querySelector('a');
-          if (link) {
-            ctaLink = link.getAttribute('href') || '#';
-            ctaText = link.textContent.trim();
-          }
-          break;
-      }
-    }
+    const img = imageCell?.querySelector('img');
+    const heading = contentCell?.querySelector('h2');
+    const paragraph = contentCell?.querySelector('p');
+    const link = contentCell?.querySelector('a');
+
+    slides.push({
+      image: img ? img.outerHTML : '',
+      heading: heading ? heading.textContent : '',
+      text: paragraph ? paragraph.textContent : '',
+      linkHref: link ? link.getAttribute('href') : '',
+      linkText: link ? link.textContent : '',
+      index: index
+    });
   });
 
-  const wrapper = document.createElement('div');
-  wrapper.className = 'hero-carousel-wrapper';
-
-  wrapper.innerHTML = `
-    <div class="hero-background">
-      ${backgroundImage}
-    </div>
-    <div class="hero-content">
-      <div class="hero-content-box">
-        <h1 class="hero-heading">${heading}</h1>
-        <p class="hero-description">${description}</p>
-        <div class="hero-cta">
-          <a href="${ctaLink}">${ctaText}</a>
+  const carouselHTML = `
+    <div class="carousel-container">
+      ${slides.map((slide, i) => `
+        <div class="carousel-slide ${i === 0 ? 'active' : ''}" data-slide="${i}">
+          <div class="slide-image-wrapper">
+            ${slide.image.replace('<img', '<img class="slide-image"')}
+          </div>
+          <div class="slide-content">
+            <h2>${slide.heading}</h2>
+            <p>${slide.text}</p>
+            ${slide.linkHref ? `<a href="${slide.linkHref}">${slide.linkText}</a>` : ''}
+          </div>
         </div>
-      </div>
+      `).join('')}
     </div>
     <div class="carousel-indicators">
-      <button class="carousel-indicator active" aria-label="Slide 1"></button>
-      <button class="carousel-indicator" aria-label="Slide 2"></button>
-      <button class="carousel-indicator" aria-label="Slide 3"></button>
+      ${slides.map((_, i) => `
+        <button class="carousel-indicator ${i === 0 ? 'active' : ''}" data-slide="${i}" aria-label="Slide ${i + 1}"></button>
+      `).join('')}
     </div>
   `;
 
-  block.textContent = '';
-  block.appendChild(wrapper);
+  block.innerHTML = carouselHTML;
 
-  // Add indicator click functionality (for future carousel expansion)
-  const indicators = wrapper.querySelectorAll('.carousel-indicator');
-  indicators.forEach((indicator, index) => {
+  // Carousel functionality
+  const slidesEl = block.querySelectorAll('.carousel-slide');
+  const indicators = block.querySelectorAll('.carousel-indicator');
+  let currentSlide = 0;
+  let autoplayInterval;
+
+  function showSlide(index) {
+    slidesEl.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    const next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  indicators.forEach((indicator) => {
     indicator.addEventListener('click', () => {
-      indicators.forEach(ind => ind.classList.remove('active'));
-      indicator.classList.add('active');
+      const slideIndex = parseInt(indicator.dataset.slide, 10);
+      showSlide(slideIndex);
+      resetAutoplay();
     });
   });
+
+  function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 8000);
+  }
+
+  function resetAutoplay() {
+    clearInterval(autoplayInterval);
+    startAutoplay();
+  }
+
+  startAutoplay();
 }
