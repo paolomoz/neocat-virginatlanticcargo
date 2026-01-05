@@ -1,0 +1,132 @@
+.holiday-hero {
+  background-color: #DA0530;
+  padding: 40px 60px;
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.holiday-hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.holiday-hero-content {
+  background: #ffffff;
+  padding: 40px;
+  max-width: 450px;
+  z-index: 2;
+}
+
+.holiday-hero-content h2 {
+  color: #DA0530;
+  font-size: 1.9em;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.holiday-hero-content p {
+  color: #DA0530;
+  font-size: 1.2em;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.holiday-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  background-color: #DA0530;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.holiday-hero-cta:hover {
+  background-color: #b80428;
+}
+
+.holiday-hero-cta::after {
+  content: 'â';
+  margin-left: 8px;
+}
+
+.holiday-hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.holiday-hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.holiday-hero-snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.snowflake {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 40px;
+}
+
+.snowflake:nth-child(1) {
+  top: 10%;
+  left: 5%;
+}
+
+.snowflake:nth-child(2) {
+  top: 50%;
+  left: 8%;
+}
+
+.snowflake:nth-child(3) {
+  top: 15%;
+  right: 25%;
+}
+
+.snowflake:nth-child(4) {
+  top: 55%;
+  right: 35%;
+}
+
+@media (max-width: 768px) {
+  .holiday-hero {
+    padding: 30px 20px;
+  }
+  
+  .holiday-hero-container {
+    flex-direction: column;
+  }
+  
+  .holiday-hero-content {
+    max-width: 100%;
+    padding: 30px;
+  }
+  
+  .holiday-hero-content h2 {
+    font-size: 1.5em;
+  }
+  
+  .holiday-hero-content p {
+    font-size: 1em;
+  }
+}
