@@ -1,0 +1,121 @@
+.points-redemption {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.points-redemption .header-row {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.points-redemption .main-heading {
+  font-size: 42px;
+  font-weight: 300;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.points-redemption .subheading {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.points-redemption .cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.points-redemption .card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.points-redemption .card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.points-redemption .card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.points-redemption .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.points-redemption .card-content {
+  padding: 24px;
+}
+
+.points-redemption .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0 0 12px 0;
+}
+
+.points-redemption .card-description {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.points-redemption .cta-container {
+  text-align: center;
+}
+
+.points-redemption .cta-button {
+  display: inline-block;
+  background-color: #1a2a5e;
+  color: white;
+  padding: 16px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.points-redemption .cta-button:hover {
+  background-color: #0f1d45;
+}
+
+@media (max-width: 900px) {
+  .points-redemption .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .points-redemption .main-heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .points-redemption .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .points-redemption .main-heading {
+    font-size: 28px;
+  }
+  
+  .points-redemption {
+    padding: 40px 16px;
+  }
+}
