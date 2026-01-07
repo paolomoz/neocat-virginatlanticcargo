@@ -1,0 +1,208 @@
+.app-download {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  min-height: 520px;
+}
+
+/* Background decorative image - blue gradient with cyan accent */
+.app-download::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(135deg, #0066cc 0%, #004d99 50%, #0051a5 100%);
+  z-index: 0;
+}
+
+/* Cyan/turquoise accent at bottom left */
+.app-download::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 200px;
+  background: #00d4e0;
+  border-top-right-radius: 100%;
+  z-index: 1;
+}
+
+.app-download-inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  max-width: 1400px;
+  width: 100%;
+  min-height: 520px;
+}
+
+.app-download-phone {
+  position: relative;
+  flex-shrink: 0;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 60px 40px 80px;
+}
+
+/* Yellow/orange circle behind phone */
+.app-download-phone::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -45%);
+  width: 340px;
+  height: 340px;
+  background: #f5a623;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.app-download-phone img {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.app-download-content {
+  background: #f5f5f5;
+  padding: 60px 80px;
+  flex: 1;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 60px;
+}
+
+.app-download h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 28px 0;
+  line-height: 1.15;
+}
+
+.app-download-content > p:first-of-type {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #4a4a4a;
+  margin: 0 0 36px 0;
+  max-width: 520px;
+}
+
+.app-download .download-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+}
+
+.app-download .app-store-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.app-download .app-store-buttons a {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.app-download .app-store-buttons a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.app-download .app-store-buttons img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .app-download-inner {
+    flex-direction: column;
+    gap: 0;
+    min-height: auto;
+  }
+
+  .app-download::before {
+    width: 100%;
+    height: 60%;
+  }
+
+  .app-download-phone {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .app-download-content {
+    padding: 40px;
+    min-height: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+
+  .app-download h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-download {
+    min-height: auto;
+  }
+
+  .app-download-phone {
+    padding: 30px 20px;
+  }
+
+  .app-download-phone::before {
+    width: 260px;
+    height: 260px;
+  }
+
+  .app-download-phone img {
+    max-width: 220px;
+  }
+
+  .app-download-content {
+    padding: 30px 24px;
+    margin: 0 16px 30px;
+  }
+
+  .app-download h2 {
+    font-size: 28px;
+  }
+
+  .app-download .app-store-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-download .app-store-buttons img {
+    height: 44px;
+  }
+}
