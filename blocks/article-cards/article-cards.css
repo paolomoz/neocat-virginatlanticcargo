@@ -1,0 +1,122 @@
+.article-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 40px;
+  font-family: "Instrument Sans", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-cards > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 0;
+  align-items: start;
+}
+
+.article-cards .card-image {
+  grid-column: 1;
+  grid-row: 1 / -1;
+}
+
+.article-cards .card-image img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.article-cards .card-category {
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  width: fit-content;
+}
+
+.article-cards .card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.article-cards .card-readtime {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+.article-cards .card-title h3 {
+  font-family: Syncopate, sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.article-cards .card-description {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14.08px;
+  color: rgb(0, 0, 0);
+  line-height: 22.528px;
+  margin: 0 0 16px 0;
+}
+
+.article-cards .card-link a {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.article-cards .card-link a:hover {
+  text-decoration: underline;
+}
+
+.article-cards .card-content {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  .article-cards {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .article-cards > div {
+    grid-template-columns: 1fr;
+  }
+  
+  .article-cards .card-image {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 16px;
+  }
+  
+  .article-cards .card-content {
+    padding-left: 0;
+  }
+}
