@@ -1,0 +1,134 @@
+.app-download {
+  position: relative;
+  padding: 60px 40px;
+  overflow: hidden;
+}
+
+.app-download > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.app-download > div > div:first-child {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.app-download > div > div:first-child::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -80px;
+  width: 450px;
+  height: 450px;
+  background: linear-gradient(135deg, #0051a5 0%, #003d7a 100%);
+  border-radius: 50% 50% 50% 0;
+  z-index: -1;
+}
+
+.app-download > div > div:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -60px;
+  width: 180px;
+  height: 180px;
+  background: #f5a623;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.app-download > div > div:first-child img {
+  max-width: 320px;
+  width: auto;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.app-download > div > div:last-child {
+  flex: 1;
+  max-width: 500px;
+}
+
+.app-download h2 {
+  font-size: 42px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.app-download p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 24px 0;
+}
+
+.app-download .app-download-subheading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+}
+
+.app-download-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-download-buttons a {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+.app-download-buttons a img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .app-download > div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .app-download > div > div:first-child::before {
+    width: 350px;
+    height: 350px;
+    top: -30px;
+    left: -50px;
+  }
+
+  .app-download > div > div:first-child::after {
+    width: 140px;
+    height: 140px;
+    bottom: -10px;
+    left: -40px;
+  }
+
+  .app-download > div > div:first-child img {
+    max-width: 280px;
+  }
+
+  .app-download h2 {
+    font-size: 32px;
+  }
+
+  .app-download-buttons {
+    justify-content: center;
+  }
+}
