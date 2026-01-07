@@ -1,0 +1,107 @@
+.promo-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.promo-banner > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  gap: 40px;
+}
+
+.promo-banner > div > div:first-child {
+  flex: 1;
+  max-width: 550px;
+}
+
+.promo-banner > div > div:last-child {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-banner h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000000;
+  margin: 0 0 20px 0;
+}
+
+.promo-banner h2 .strikethrough {
+  text-decoration: line-through;
+  text-decoration-color: #000000;
+  text-decoration-thickness: 2px;
+}
+
+.promo-banner .description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666666;
+  margin: 0 0 16px 0;
+}
+
+.promo-banner .discount {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000000;
+  margin: 0 0 24px 0;
+}
+
+.promo-banner .cta-button {
+  display: inline-block;
+  background-color: #8bc34a;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.promo-banner .cta-button:hover {
+  background-color: #7cb342;
+}
+
+.promo-banner > div > div:last-child img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .promo-banner > div {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .promo-banner > div > div:first-child {
+    max-width: 100%;
+  }
+  
+  .promo-banner h2 {
+    font-size: 32px;
+  }
+  
+  .promo-banner > div > div:last-child img {
+    max-width: 300px;
+  }
+}
