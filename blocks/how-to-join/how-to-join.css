@@ -1,0 +1,119 @@
+.how-to-join {
+  background-color: #c8dcc4;
+  padding: 60px 20px 80px;
+  max-width: 100%;
+}
+
+.how-to-join > div:first-child {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.how-to-join > div:first-child > div:first-child {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.how-to-join > div:first-child > div:last-child {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.how-to-join .options-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.how-to-join .option-column {
+  flex: 1;
+  padding: 20px 60px;
+}
+
+.how-to-join .option-column:first-child {
+  border-right: 1px solid #666;
+}
+
+.how-to-join .option-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.how-to-join .new-badge {
+  background-color: #d4a520;
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.how-to-join .option-description {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.how-to-join .option-cta a {
+  display: inline-block;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.how-to-join .option-cta a:hover {
+  background-color: #333;
+}
+
+.how-to-join .option-secondary a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .how-to-join > div:first-child > div:first-child {
+    font-size: 36px;
+  }
+  
+  .how-to-join .options-container {
+    flex-direction: column;
+  }
+  
+  .how-to-join .option-column {
+    padding: 30px 20px;
+  }
+  
+  .how-to-join .option-column:first-child {
+    border-right: none;
+    border-bottom: 1px solid #666;
+  }
+}
