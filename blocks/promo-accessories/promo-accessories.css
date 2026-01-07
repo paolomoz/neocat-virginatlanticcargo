@@ -1,0 +1,107 @@
+.promo-accessories {
+  width: 100%;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+.promo-accessories > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.promo-accessories > div > div:first-child {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+}
+
+.promo-accessories > div > div:last-child {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-accessories h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+.promo-accessories h2 .strikethrough {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.promo-accessories .subtext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.promo-accessories .discount {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000;
+  margin: 0 0 28px 0;
+}
+
+.promo-accessories .cta-button {
+  display: inline-block;
+  background-color: #8bc34a;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 0;
+  transition: background-color 0.2s ease;
+}
+
+.promo-accessories .cta-button:hover {
+  background-color: #7cb342;
+}
+
+.promo-accessories > div > div:last-child img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .promo-accessories {
+    padding: 40px 20px;
+  }
+  
+  .promo-accessories > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .promo-accessories > div > div:first-child {
+    max-width: 100%;
+  }
+  
+  .promo-accessories h2 {
+    font-size: 32px;
+  }
+  
+  .promo-accessories > div > div:last-child {
+    max-width: 400px;
+  }
+}
