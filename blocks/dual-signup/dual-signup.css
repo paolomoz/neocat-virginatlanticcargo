@@ -1,0 +1,103 @@
+.dual-signup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.dual-signup > div {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.dual-signup > div:first-child {
+  border-right: 1px solid #e0e0e0;
+}
+
+.dual-signup .item-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dual-signup .new-badge {
+  background-color: #ffc429;
+  color: #1a1a1a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.dual-signup .item-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+  margin-bottom: 24px;
+  font-family: sans-serif;
+}
+
+.dual-signup .item-cta a {
+  display: inline-block;
+  background-color: #003168;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.dual-signup .item-cta a:hover {
+  background-color: #002450;
+}
+
+.dual-signup .item-secondary {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #333333;
+  font-family: sans-serif;
+}
+
+.dual-signup .item-secondary a {
+  color: #003168;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.dual-signup .item-secondary a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .dual-signup {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .dual-signup > div {
+    padding: 30px 20px;
+    border-right: none !important;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .dual-signup > div:last-child {
+    border-bottom: none;
+  }
+}
