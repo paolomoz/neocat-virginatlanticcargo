@@ -1,0 +1,110 @@
+.dual-signup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dual-signup > div {
+  flex: 1;
+  min-width: 320px;
+  padding: 0 40px;
+  position: relative;
+}
+
+.dual-signup > div:first-child {
+  border-right: 1px solid #d0d0d0;
+  padding-left: 0;
+}
+
+.dual-signup > div:last-child {
+  padding-right: 0;
+}
+
+.dual-signup .item-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dual-signup .new-badge {
+  background-color: #ffc429;
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 16px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dual-signup .item-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dual-signup .item-cta a {
+  display: inline-block;
+  background-color: #003168;
+  color: #ffffff;
+  padding: 18px 40px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.dual-signup .item-cta a:hover {
+  background-color: #002450;
+}
+
+.dual-signup .item-secondary {
+  margin-top: 32px;
+  font-size: 16px;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.dual-signup .item-secondary a {
+  color: #003168;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.dual-signup .item-secondary a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .dual-signup {
+    flex-direction: column;
+    gap: 0;
+    padding: 40px 20px;
+  }
+  
+  .dual-signup > div {
+    padding: 30px 0;
+    border-right: none !important;
+    border-bottom: 1px solid #d0d0d0;
+  }
+  
+  .dual-signup > div:last-child {
+    border-bottom: none;
+  }
+}
