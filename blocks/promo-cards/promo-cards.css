@@ -1,0 +1,86 @@
+.promo-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #e8f4f0;
+}
+
+.promo-cards > div {
+  background-color: #e8f4f0;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-cards .card-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+.promo-cards .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo-cards .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a2e4c;
+  padding: 16px 16px 8px 16px;
+  line-height: 1.3;
+}
+
+.promo-cards .card-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1a2e4c;
+  padding: 0 16px 16px 16px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.promo-cards .card-cta {
+  padding: 16px;
+  border-top: 1px solid #d0e0dc;
+}
+
+.promo-cards .card-cta a {
+  color: #007b8a;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.promo-cards .card-cta a::after {
+  content: "→";
+  font-size: 16px;
+}
+
+.promo-cards .card-cta a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .promo-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .promo-cards {
+    grid-template-columns: 1fr;
+  }
+}
