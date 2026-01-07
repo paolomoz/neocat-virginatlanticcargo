@@ -1,0 +1,108 @@
+.dual-signup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dual-signup > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+.dual-signup > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dual-signup h3 {
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dual-signup .badge-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffb81c;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dual-signup p {
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0 0 24px 0;
+  max-width: 520px;
+}
+
+.dual-signup .secondary-text {
+  font-size: 16px;
+  color: #333333;
+  margin-top: 16px;
+}
+
+.dual-signup a.button {
+  display: inline-block;
+  background-color: #003168;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.dual-signup a.button:hover {
+  background-color: #002244;
+}
+
+.dual-signup a.text-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #003168;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+.dual-signup a.text-link:hover {
+  color: #002244;
+}
+
+@media (max-width: 768px) {
+  .dual-signup {
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 20px;
+  }
+
+  .dual-signup > div {
+    min-width: 100%;
+  }
+
+  .dual-signup a.button {
+    width: 100%;
+    text-align: center;
+  }
+}
