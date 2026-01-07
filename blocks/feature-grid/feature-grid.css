@@ -1,0 +1,57 @@
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 60px;
+  padding: 40px 0;
+  font-family: "Instrument Sans", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-grid > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.feature-grid .feature-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-grid .feature-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.feature-grid .feature-text {
+  font-size: 14.08px;
+  line-height: 22.528px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 40px;
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 24px 16px;
+  }
+}
