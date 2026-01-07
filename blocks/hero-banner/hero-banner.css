@@ -1,0 +1,95 @@
+.hero-banner {
+  position: relative;
+  min-height: 400px;
+  background: linear-gradient(135deg, #c5d5c8 0%, #c5d5c8 50%, #a8d4d4 80%, #7ec8c8 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 60%;
+  height: 150%;
+  background: linear-gradient(180deg, rgba(120, 200, 200, 0.4) 0%, rgba(168, 212, 212, 0.3) 50%, transparent 100%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-banner > div {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.hero-banner > div > div {
+  max-width: 550px;
+}
+
+.hero-banner h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: italic;
+  color: #0f4c5c;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.hero-banner h1 em {
+  font-style: italic;
+}
+
+.hero-banner > div > div > p:first-of-type {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #0f4c5c;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
+}
+
+.hero-banner > div > div > p:last-of-type {
+  margin: 0;
+}
+
+.hero-banner a {
+  display: inline-block;
+  background-color: #0f4c5c;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-banner a:hover {
+  background-color: #0a3a47;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 350px;
+  }
+
+  .hero-banner > div {
+    padding: 40px 20px;
+  }
+
+  .hero-banner h1 {
+    font-size: 36px;
+  }
+
+  .hero-banner > div > div {
+    max-width: 100%;
+  }
+}
