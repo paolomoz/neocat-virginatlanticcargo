@@ -1,0 +1,108 @@
+.hero-banner {
+  position: relative;
+  min-height: 400px;
+  background: linear-gradient(135deg, #c5d5ca 0%, #c5d5ca 50%, #7fbfbe 70%, #5ba8a8 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(160deg, transparent 30%, rgba(127, 191, 190, 0.6) 50%, rgba(91, 168, 168, 0.8) 70%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: 5%;
+  width: 40%;
+  height: 80%;
+  background: rgba(168, 210, 209, 0.5);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: rotate(15deg);
+  z-index: 2;
+}
+
+.hero-banner > div {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.hero-banner > div > div {
+  max-width: 550px;
+}
+
+.hero-banner h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: italic;
+  color: #1a3a5c;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.hero-banner h1 em {
+  font-style: italic;
+}
+
+.hero-banner p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  color: #1a3a5c;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+}
+
+.hero-banner p:last-child {
+  margin-bottom: 0;
+}
+
+.hero-banner a {
+  display: inline-block;
+  background-color: #0d4d5a;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-banner a:hover {
+  background-color: #0a3d48;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 350px;
+  }
+
+  .hero-banner > div {
+    padding: 40px 24px;
+  }
+
+  .hero-banner h1 {
+    font-size: 32px;
+  }
+
+  .hero-banner::before,
+  .hero-banner::after {
+    opacity: 0.5;
+  }
+}
