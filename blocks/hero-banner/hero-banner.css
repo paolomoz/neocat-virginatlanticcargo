@@ -1,0 +1,104 @@
+.hero-banner {
+  position: relative;
+  min-height: 400px;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d4eef6 50%, #c5e8f2 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 70%;
+  height: 200%;
+  background: linear-gradient(180deg, rgba(176, 224, 230, 0.4) 0%, rgba(135, 206, 235, 0.3) 50%, rgba(173, 216, 230, 0.2) 100%);
+  border-radius: 50%;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.hero-banner::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 40%;
+  height: 120%;
+  background: linear-gradient(160deg, rgba(64, 224, 208, 0.15) 0%, rgba(127, 255, 212, 0.1) 100%);
+  border-radius: 40% 60% 70% 30%;
+  transform: rotate(10deg);
+  pointer-events: none;
+}
+
+.hero-banner > div {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.hero-banner .hero-content {
+  max-width: 550px;
+}
+
+.hero-banner h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: 400;
+  font-style: italic;
+  color: #0a2240;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+.hero-banner h1 em {
+  font-style: italic;
+}
+
+.hero-banner p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+}
+
+.hero-banner .hero-cta a {
+  display: inline-block;
+  background-color: #0a2240;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-banner .hero-cta a:hover {
+  background-color: #133c8f;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 350px;
+  }
+
+  .hero-banner > div {
+    padding: 40px 24px;
+  }
+
+  .hero-banner h1 {
+    font-size: 32px;
+  }
+
+  .hero-banner .hero-content {
+    max-width: 100%;
+  }
+}
