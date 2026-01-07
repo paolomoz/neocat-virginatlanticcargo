@@ -1,0 +1,122 @@
+.style-faq-accordion {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.6px;
+  color: rgb(0, 0, 0);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.style-faq-accordion .header-row {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.style-faq-accordion .header-title {
+  font-family: Syncopate, sans-serif;
+  font-size: clamp(40px, 6vw, 90.4px);
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+
+.style-faq-accordion .header-subtitle {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: 0;
+}
+
+.style-faq-accordion .accordion-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.style-faq-accordion .accordion-item:first-of-type {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.style-faq-accordion .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.style-faq-accordion .accordion-question {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  flex: 1;
+}
+
+.style-faq-accordion .accordion-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.style-faq-accordion .accordion-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 2;
+  fill: none;
+}
+
+.style-faq-accordion .accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.style-faq-accordion .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.style-faq-accordion .accordion-item.active .accordion-content {
+  max-height: 200px;
+}
+
+.style-faq-accordion .accordion-answer {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .style-faq-accordion {
+    padding: 40px 16px;
+  }
+
+  .style-faq-accordion .header-title {
+    font-size: 32px;
+  }
+
+  .style-faq-accordion .accordion-question {
+    font-size: 18px;
+  }
+
+  .style-faq-accordion .accordion-header {
+    padding: 20px 0;
+  }
+}
