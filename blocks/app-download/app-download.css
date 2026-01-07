@@ -1,0 +1,159 @@
+.app-download {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.app-download-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.app-download-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.app-download-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 60px;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.app-download-image-container {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.app-download-yellow-circle {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background-color: #f5a623;
+  border-radius: 50%;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-download-phone {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  max-height: 480px;
+}
+
+.app-download-content {
+  flex: 1;
+  min-width: 350px;
+  padding: 20px 0;
+  padding-right: 40px;
+}
+
+.app-download h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 28px 0;
+  line-height: 1.15;
+}
+
+.app-download-content > p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0 0 28px 0;
+}
+
+.app-download-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px 0 !important;
+}
+
+.app-download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.app-download-buttons a {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.app-download-buttons a:hover {
+  opacity: 0.8;
+}
+
+.app-download-buttons a img {
+  display: block;
+  height: 48px;
+  width: auto;
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .app-download-bg-container {
+    width: 100%;
+    height: 50%;
+  }
+
+  .app-download-inner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .app-download-image-container,
+  .app-download-content {
+    min-width: 100%;
+  }
+
+  .app-download-content {
+    padding-right: 0;
+  }
+
+  .app-download h2 {
+    font-size: 32px;
+  }
+
+  .app-download-buttons {
+    justify-content: center;
+  }
+
+  .app-download-yellow-circle {
+    width: 280px;
+    height: 280px;
+  }
+}

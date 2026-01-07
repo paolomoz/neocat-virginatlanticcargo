@@ -1,0 +1,84 @@
+export default function decorate(block) {
+  // Create background container with decorative image
+  const bgContainer = document.createElement('div');
+  bgContainer.classList.add('app-download-bg-container');
+  
+  const bgImg = document.createElement('img');
+  bgImg.src = 'https://www.avionrewards.com/_assets-custom/img/app-callout-bg.png';
+  bgImg.alt = '';
+  bgImg.classList.add('app-download-bg');
+  bgImg.setAttribute('aria-hidden', 'true');
+  bgContainer.appendChild(bgImg);
+  
+  // Create inner wrapper for content
+  const innerWrapper = document.createElement('div');
+  innerWrapper.classList.add('app-download-inner');
+  
+  const row = block.children[0];
+  if (!row) return;
+
+  const cells = [...row.children];
+  
+  // First cell contains the phone mockup image
+  if (cells[0]) {
+    cells[0].classList.add('app-download-image-container');
+    
+    // Add yellow circle behind phone
+    const yellowCircle = document.createElement('div');
+    yellowCircle.classList.add('app-download-yellow-circle');
+    cells[0].insertBefore(yellowCircle, cells[0].firstChild);
+    
+    const phoneImg = cells[0].querySelector('img');
+    if (phoneImg) {
+      phoneImg.classList.add('app-download-phone');
+    }
+  }
+
+  // Second cell contains text content
+  if (cells[1]) {
+    cells[1].classList.add('app-download-content');
+    
+    // Find and style the subtitle paragraph
+    const paragraphs = cells[1].querySelectorAll('p');
+    paragraphs.forEach((p) => {
+      if (p.textContent.trim() === 'Download the app') {
+        p.classList.add('app-download-subtitle');
+      }
+    });
+
+    // Find the links container and style it
+    const links = cells[1].querySelectorAll('a');
+    if (links.length > 0) {
+      // Check if links are already in a container div
+      const lastDiv = cells[1].querySelector('.app-download-buttons');
+      if (!lastDiv) {
+        // Wrap store links in a buttons container
+        const buttonsContainer = document.createElement('div');
+        buttonsContainer.classList.add('app-download-buttons');
+        
+        links.forEach((link) => {
+          const parent = link.parentElement;
+          buttonsContainer.appendChild(link);
+          // Remove empty parent if it was just containing the link
+          if (parent && parent.children.length === 0 && parent.tagName === 'P') {
+            parent.remove();
+          }
+        });
+        
+        cells[1].appendChild(buttonsContainer);
+      }
+    }
+  }
+  
+  // Move cells to inner wrapper
+  cells.forEach(cell => {
+    innerWrapper.appendChild(cell);
+  });
+  
+  // Remove original row
+  row.remove();
+  
+  // Add background and inner wrapper to block
+  block.appendChild(bgContainer);
+  block.appendChild(innerWrapper);
+}
