@@ -1,0 +1,53 @@
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 48px;
+  padding: 48px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.feature-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.feature-grid .feature-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.feature-grid .feature-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.feature-grid .feature-text {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 14.08px;
+  font-weight: 400;
+  line-height: 22.528px;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 16px;
+  }
+}
